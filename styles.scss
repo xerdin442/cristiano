@@ -1,0 +1,67 @@
+$body-bg: #121212;
+$orange: #ff2200;
+$nav-tabs-link-active-color: $body-bg;
+$nav-tabs-link-active-bg: $orange;
+$nav-tabs-link-active-border-color: $orange;
+$nav-link-color: $orange;
+$nav-link-font-size: 0.8rem;
+$nav-link-font-weight: 600;
+$nav-link-padding-x: 0.6rem;
+$nav-link-padding-y: 0.4rem;
+$nav-link-hover-color: $orange;
+$nav-tabs-border-color: $orange;
+$nav-tabs-link-hover-border-color: $orange;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px
+);
+
+$container-max-widths: (
+  sm: 420px,
+  md: 720px,
+  lg: 960px
+);
+
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Carter+One&family=Poppins:wght@400&family=Teko:wght@500&display=swap");
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+header {
+  h1 {
+    font: {
+      family: "Teko";
+      size: 3rem;
+    }
+    color: $orange;
+  }
+}
+.nav-tabs {
+  font-family: "Poppins";
+}
+.img-box {
+  position: relative;
+
+  .img {
+    display: block;
+  }
+  .img-overlay {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background:linear-gradient(#000019, transparent);
+    border-bottom-left-radius: 0.5rem;
+    transition: 0.5s ease-out;
+    color: $orange;
+
+    .overlay-small-text {
+      font-family: "Poppins";
+    }
+    .overlay-big-text {
+      font-family: "Teko";
+    }
+  }
+}

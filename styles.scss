@@ -56,12 +56,44 @@ header {
     border-bottom-left-radius: 0.5rem;
     transition: 0.5s ease-out;
     color: $orange;
+    font-family: "Teko";
+    text-transform: uppercase;
 
-    .overlay-small-text {
-      font-family: "Poppins";
+    %typing-text {
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: max-content;
+      width: 0;
+      animation-name: typing;
+      animation-duration: 1.5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
     }
-    .overlay-big-text {
-      font-family: "Teko";
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    span:nth-child(1) {
+      font-size: 1.8rem;
+      @extend %typing-text;
+      animation-timing-function: steps(7);
+    }
+    span:nth-child(2) {
+      font-size: 2rem;
+      @extend %typing-text;
+      animation-timing-function: steps(8);
+      animation-delay: 1.5s;
+    }
+    span:nth-child(3) {
+      font-size: 2.2rem;
+      @extend %typing-text;
+      animation-timing-function: steps(10);
+      animation-delay: 3s;
     }
   }
 }
